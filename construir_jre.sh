@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
+# Poupa tempo
+_COMPILE_OUTṔUT="out/production/ProjetoFX"
+
 # Verifica se o projeto foi compilado
-if [[ ! -d "out/production/ProjetoFX" ]]; then
+if [[ ! -d "$_COMPILE_OUTṔUT" ]]; then
   echo "[ E ] - O projeto não foi compilado ainda."
   exit 1
 fi
@@ -12,7 +15,7 @@ export JavaFX_14_JMODS="/usr/lib/jvm/javafx-jmods-14.0.1/"
 # Limpa a pasta de saída e constrói dentro dela
 _BUILD="build"
 rm -rf "$_BUILD"
-jlink14 --module-path "out/production/ProjetoFX"":""$JavaFX_14_JMODS" --add-modules ProjetoFX --output "$_BUILD"
+jlink14 --module-path "$_COMPILE_OUTṔUT"":""$JavaFX_14_JMODS" --add-modules ProjetoFX --output "$_BUILD"
 
 # Entra na pasta construída
 _BIN="$_BUILD""/bin"
