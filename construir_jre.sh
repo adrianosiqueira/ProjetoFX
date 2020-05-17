@@ -15,7 +15,7 @@ export JavaFX_14_JMODS="/usr/lib/jvm/javafx-jmods-14.0.1/"
 # Limpa a pasta de saída e constrói dentro dela
 _BUILD="build"
 rm -rf "$_BUILD"
-jlink14 --module-path "$_COMPILE_OUTPUT"":""$JavaFX_14_JMODS" --add-modules ProjetoFX --output "$_BUILD"
+jlink14 --module-path "$_COMPILE_OUTPUT"":""$JavaFX_14_JMODS" --add-modules ProjetoFX --no-header-files --no-man-pages --compress=2 --output "$_BUILD"
 
 # Entra na pasta construída
 _BIN="$_BUILD""/bin"
@@ -23,10 +23,10 @@ cd "$_BIN" || exit 1
 
 # Criar lançador para Linux
 _LINUX="launcher.sh"
-echo "#!/usr/bin/env bash" > "$_LINUX"
-echo "" >> "$_LINUX"
-echo "./java --enable-preview --module ProjetoFX/pacote.Programa" >> "$_LINUX"
-echo "" >> "$_LINUX"
+echo "#!/usr/bin/env bash" >"$_LINUX"
+echo "" >>"$_LINUX"
+echo "./java --enable-preview --module ProjetoFX/pacote.Programa" >>"$_LINUX"
+echo "" >>"$_LINUX"
 chmod 755 "$_LINUX"
 
 # TODO Criar lançador para windows
