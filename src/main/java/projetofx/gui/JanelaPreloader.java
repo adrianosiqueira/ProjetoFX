@@ -1,5 +1,6 @@
 package projetofx.gui;
 
+import javafx.application.Platform;
 import javafx.application.Preloader;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -32,7 +33,7 @@ public class JanelaPreloader extends Preloader {
                 TimeUnit.SECONDS.sleep(1);
             } catch (InterruptedException ignored) {}
 
-            stage.close();
+            Platform.runLater(stage::close);
         };
 
         new Thread(runnable).start();
