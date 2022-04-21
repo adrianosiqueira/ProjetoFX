@@ -3,6 +3,6 @@
 
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.VBox?>
-<VBox alignment="CENTER" prefHeight="480.0" prefWidth="640.0" styleClass="pane-root" stylesheets="@JanelaPrincipalStyle.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="CENTER" prefHeight="480.0" prefWidth="854.0" styleClass="pane-root" stylesheets="@JanelaPrincipalStyle.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
     <Label text="Janela Principal"/>
 </VBox>
