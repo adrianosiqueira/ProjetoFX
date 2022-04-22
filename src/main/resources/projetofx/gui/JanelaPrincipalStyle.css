@@ -1,0 +1,15 @@
+.pane-root {
+    -fx-background-image    : url("../imagens/background-janela.jpg");
+    -fx-background-position : center;
+    -fx-background-repeat   : no-repeat;
+    -fx-background-size     : cover;
+}
+
+.pane-root .label {
+    -fx-background-color  : rgba(0, 0, 0, 0.75);
+    -fx-background-insets : -5 -20;
+    -fx-background-radius : 10;
+    -fx-font-size         : 40;
+    -fx-font-weight       : bold;
+    -fx-text-fill         : white;
+}
