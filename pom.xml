@@ -55,7 +55,14 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.8</version>
                 <configuration>
-                    <mainClass>hellofx/org.openjfx.App</mainClass>
+                    <jmodsPath>/usr/lib/jvm/javafx-jmods-17.0.2/</jmodsPath>
+                    <compress>2</compress>
+                    <noHeaderFiles>true</noHeaderFiles>
+                    <noManPages>true</noManPages>
+                    <stripDebug>true</stripDebug>
+                    <mainClass>ProjetoFX/projetofx.principal.Principal</mainClass>
+                    <jlinkImageName>ProjetoFXImage</jlinkImageName>
+                    <launcher>ProjetoFX-Launcher</launcher>
                 </configuration>
             </plugin>
         </plugins>
