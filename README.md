@@ -42,6 +42,15 @@ Para utilizá-lo, basta usar o comando:
 mvn javafx:jlink
 ```
 
+**Observação:** adicionando a linha nas configurações
+
+```xml
+<jlinkZipName>ProjetoFX-${version}</jlinkZipName>
+```
+
+fará com que o plugin crie um pacote zip contendo a imagem gerada, nomeado de
+acordo com a versão do projeto.
+
 Caso o projeto não esteja compilado ainda, pode usar esse comando:
 
 ```
